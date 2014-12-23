@@ -1,0 +1,1 @@
+web: bundle exec ruby build.rb -sv -e $RACK_ENV -p $PORT
