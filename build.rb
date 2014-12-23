@@ -88,6 +88,6 @@ class Webhook < Goliath::API
   def response(env)
     status[:build] += 1
 
-    [200, {}, "Our canon is loaded! Now let us take the work from here pal!"]
+    [200, { "X-Build-Queue" => status[:build].to_s }, "Our canon is loaded! Now let us take the work from here pal!"]
   end
 end
