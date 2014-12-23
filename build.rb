@@ -7,7 +7,7 @@ require 'goliath'
 require 'git'
 
 ENV['MM_ROOT'] = File.join(Dir.pwd, "src")
-ENV['BUILD_INTERVAL'] ||= "30"
+ENV['BUILD_INTERVAL'] ||= "500"
 
 %w(GH_REPOSITORY GH_TOKEN AWS_ACCESS_KEY AWS_ACCESS_KEY AWS_SECRET_KEY).each do |args|
   raise ArgumentError.new("#{args} is missing!") unless ENV[args]
