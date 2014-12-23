@@ -81,6 +81,10 @@ end
 class Webhook < Goliath::API
   plugin DeferedBuild
 
+  use Rack::Auth::Basic, "Magic word?" do |username, password|
+    [username, password] == [ENV['AUTH_USER'], ENV["AUTH_PASSWORD"]]
+  end if ENV['AUTH_USER'] && ENV["AUTH_PASSWORD"]
+
   def response(env)
     status[:build] += 1
 
