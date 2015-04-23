@@ -3,6 +3,8 @@ require 'middleman-core/cli/build'
 require 'contentful_middleman'
 require 'middleman-core/profiling'
 require 'middleman-s3_sync'
+require 'middleman-react'
+require 'react-rails'
 require 'goliath'
 require 'git'
 
