@@ -7,6 +7,7 @@ require 'middleman-react'
 require 'react-rails'
 require 'goliath'
 require 'git'
+require 'redcarpet'
 
 ENV['MM_ROOT'] = File.join(Dir.pwd, "src")
 ENV['BUILD_INTERVAL'] ||= "500"
